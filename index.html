@@ -1,0 +1,721 @@
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AbilityCare — Compassionate Disability Support Services</title>
+  <meta name="description" content="AbilityCare provides compassionate, person-centred disability support: daily living, community participation, in-home care, plan management, respite and more." />
+  <meta name="theme-color" content="#1F4D8F"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'sans-serif'] },
+          colors: {
+            primary: { DEFAULT: '#1F4D8F', 600:'#1A437E', 700:'#16396B' },
+            accent:  { DEFAULT: '#0E9AAF' }
+          },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.08)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { --ring: 0 0% 20%; }
+    .focus-ring:focus-visible { outline: none; box-shadow: 0 0 0 3px hsl(var(--ring) / .25); }
+    .glass { backdrop-filter: saturate(1.2) blur(8px); }
+    .sr-only-focusable:active, .sr-only-focusable:focus { position: static !important; width: auto; height: auto; clip: auto; }
+    .high-contrast body { filter: contrast(1.2) saturate(1.05); }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased leading-relaxed selection:bg-primary/20">
+  <!-- Skip -->
+  <a href="#main" class="sr-only sr-only-focusable focus-ring absolute left-4 top-4 bg-white px-3 py-2 rounded shadow">Skip to content</a>
+
+  <!-- Early JS for year -->
+  <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-current-year]').forEach(el=>el.textContent=new Date().getFullYear())})</script>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 border-b border-slate-200 glass">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a class="flex items-center gap-3 focus-ring rounded" href="#home" aria-label="AbilityCare home">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-bold">AC</span>
+        <span class="font-extrabold tracking-tight text-slate-900">AbilityCare</span>
+      </a>
+
+      <nav aria-label="Primary" class="hidden md:flex items-center gap-1">
+        <a href="#services" class="px-3 py-2 rounded hover:bg-slate-100 focus-ring">Services</a>
+        <a href="#about" class="px-3 py-2 rounded hover:bg-slate-100 focus-ring">About</a>
+        <a href="#team" class="px-3 py-2 rounded hover:bg-slate-100 focus-ring">Team</a>
+        <a href="#stories" class="px-3 py-2 rounded hover:bg-slate-100 focus-ring">Stories</a>
+        <a href="#resources" class="px-3 py-2 rounded hover:bg-slate-100 focus-ring">Resources</a>
+        <a href="#contact" class="px-3 py-2 rounded hover:bg-slate-100 bg-primary text-white focus-ring">Contact</a>
+        <div class="ml-2 flex items-center gap-2 pl-2 border-l border-slate-200">
+          <button id="decreaseText" class="px-2 py-1 rounded border focus-ring" aria-label="Decrease text size">A−</button>
+          <button id="increaseText" class="px-2 py-1 rounded border focus-ring" aria-label="Increase text size">A+</button>
+          <button id="toggleContrast" class="px-2 py-1 rounded border focus-ring" aria-label="Toggle high contrast">Contrast</button>
+        </div>
+      </nav>
+
+      <button id="mobileToggle" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border focus-ring" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="mx-auto max-w-7xl px-4 py-2 grid">
+        <a class="py-2" href="#home">Home</a>
+        <a class="py-2" href="#services">Services</a>
+        <a class="py-2" href="#about">About</a>
+        <a class="py-2" href="#team">Team</a>
+        <a class="py-2" href="#stories">Stories</a>
+        <a class="py-2" href="#resources">Resources</a>
+        <a class="py-2" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="relative">
+      <div class="absolute inset-0">
+        <img src="https://mylifemyway.net.au/wp-content/uploads/2024/04/Benefits-of-NDIS-Support-Coordination-in-Australia.jpg?q=80&w=1800&auto=format&fit=crop" alt="A support worker assisting a person using a wheelchair in a bright, welcoming home" class="h-full w-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/35 to-transparent"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-white">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold ring-1 ring-white/20">NDIS-Registered • Person-Centred • Inclusive</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight">Support that empowers independence</h1>
+        <p class="mt-4 max-w-2xl text-lg text-white/90">We partner with participants, families and carers to deliver respectful, practical support across daily living, community participation and in-home care.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#services" class="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 font-semibold text-white shadow-soft hover:bg-primary-600 focus-ring">Explore Services</a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-white/95 px-5 py-3 font-semibold text-slate-900 hover:bg-white focus-ring">Book a Consultation</a>
+        </div>
+        <dl class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl">
+          <div><dt class="text-white/70 text-sm">Years caring</dt><dd class="text-2xl font-bold">10+</dd></div>
+          <div><dt class="text-white/70 text-sm">Participants supported</dt><dd class="text-2xl font-bold">1,200+</dd></div>
+          <div><dt class="text-white/70 text-sm">Locations</dt><dd class="text-2xl font-bold">Sydney-wide</dd></div>
+          <div><dt class="text-white/70 text-sm">Avg. rating</dt><dd class="text-2xl font-bold">4.9/5</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section aria-label="Accreditations" class="bg-slate-50 border-y border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6 opacity-90">
+        <div class="flex items-center gap-3"><span class="h-9 w-9 rounded bg-primary/10 text-primary grid place-items-center font-bold">✓</span><span class="text-sm">NDIS Registered</span></div>
+        <div class="flex items-center gap-3"><span class="h-9 w-9 rounded bg-primary/10 text-primary grid place-items-center font-bold">✓</span><span class="text-sm">Police Checked Staff</span></div>
+        <div class="flex items-center gap-3"><span class="h-9 w-9 rounded bg-primary/10 text-primary grid place-items-center font-bold">✓</span><span class="text-sm">First-Aid Trained</span></div>
+        <div class="flex items-center gap-3"><span class="h-9 w-9 rounded bg-primary/10 text-primary grid place-items-center font-bold">✓</span><span class="text-sm">Quality & Safeguards</span></div>
+      </div>
+    </section>
+
+    <!-- Services (detailed with images + videos) -->
+    <section id="services" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Services</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl">Every service is tailored to your goals. Browse offerings below—each includes a short video explainer and clear outcomes.</p>
+        </div>
+        <div role="tablist" aria-label="Filter services" class="inline-flex rounded-xl border bg-white p-1">
+          <button role="tab" aria-selected="true" data-filter="all" class="px-3 py-1.5 text-sm rounded-lg bg-slate-900 text-white">All</button>
+          <button role="tab" aria-selected="false" data-filter="daily" class="px-3 py-1.5 text-sm rounded-lg hover:bg-slate-100">Daily Living</button>
+          <button role="tab" aria-selected="false" data-filter="community" class="px-3 py-1.5 text-sm rounded-lg hover:bg-slate-100">Community</button>
+          <button role="tab" aria-selected="false" data-filter="clinical" class="px-3 py-1.5 text-sm rounded-lg hover:bg-slate-100">Clinical</button>
+          <button role="tab" aria-selected="false" data-filter="home" class="px-3 py-1.5 text-sm rounded-lg hover:bg-slate-100">In-Home</button>
+        </div>
+      </div>
+
+      <div id="serviceGrid" class="mt-10 grid md:grid-cols-2 gap-8">
+        <!-- Card template repeated -->
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="daily home">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://homehelpershomecare.com/wp-content/uploads/2024/04/sub-sidenav-header-caregiver-meal-prep.jpg?q=80&w=1600&auto=format&fit=crop" alt="Support worker helping with meal preparation in a kitchen" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Assistance with Daily Living</h3>
+            <p class="mt-2 text-slate-600">Personal care, meal prep, household tasks and routines designed around your preferences. Our team promotes autonomy while ensuring safety and dignity.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Showering, dressing, grooming</li>
+              <li>Meal planning & nutrition</li>
+              <li>Light domestic assistance</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 60-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?rel=0&modestbranding=1" title="Daily living support explained" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Captions available in the player. Transcript available on request.</p>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Enquire</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Assistance with Daily Living">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="community">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVa-vP0ANgWm0yupTtehVABKP0mOLWXNu3uw&s?q=80&w=1600&auto=format&fit=crop" alt="Group enjoying a community art class" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Community Participation</h3>
+            <p class="mt-2 text-slate-600">Build confidence and friendships through social, recreational and learning activities. We handle transport, access, and coordination.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Social outings & events</li>
+              <li>Skills workshops</li>
+              <li>Volunteering pathways</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 45-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/2Vv-Bfvoq4g?rel=0&modestbranding=1" title="Community participation overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Join a Program</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Community Participation">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="home">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzR_k2pfdMAVzLMaolsnZBjbsnEilRI7j4cw&s?q=80&w=1600&auto=format&fit=crop" alt="Support worker assisting with medication at home" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">In-Home Care & Overnight Support</h3>
+            <p class="mt-2 text-slate-600">Flexible weekday, weekend and overnight shifts, with consistent staff for continuity. Sleepover and active night options available.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Personal care & medication prompts</li>
+              <li>Mobility & transfers</li>
+              <li>Domestic assistance</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 50-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/JgDNFQ2TiO4?rel=0&modestbranding=1" title="In-home overnight support overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Check Availability</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="In-Home Care & Overnight">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="clinical">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9x6pJR1boOTLtigtwaHJy87HaGuFfkksBTA&s?q=80&w=1600&auto=format&fit=crop" alt="Allied health professional consulting with a participant and family" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Allied Health Coordination</h3>
+            <p class="mt-2 text-slate-600">OT, physio and speech therapy referrals, equipment trials and home modifications—coordinated and documented for NDIS compliance.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Therapy appointments</li>
+              <li>Assistive technology trials</li>
+              <li>Home modifications liaising</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 60-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/Tn6-PIqc4UM?rel=0&modestbranding=1" title="Allied health coordination overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Get a Plan</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Allied Health Coordination">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="daily">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwlTkFMvikchDss-F1PVhCEWww2ddcvDqp-w&s?q=80&w=1600&auto=format&fit=crop" alt="Support coordinator reviewing paperwork with a participant" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Support Coordination & Plan Management</h3>
+            <p class="mt-2 text-slate-600">We simplify the NDIS: budgeting, provider choice, service agreements and reporting—so you can focus on outcomes.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Choice & control coaching</li>
+              <li>Invoice processing</li>
+              <li>Provider liaison</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 40-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/hTWKB7wtu3Y?rel=0&modestbranding=1" title="Plan management overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Talk to a Coordinator</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Support Coordination">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="community home">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXU2NlrGqTjIZXbVrqxIp5BLRa95gzUU0hMg&s?q=80&w=1600&auto=format&fit=crop" alt="Respite cottage exterior with garden" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Short-Term Accommodation (Respite)</h3>
+            <p class="mt-2 text-slate-600">Safe, welcoming STA with activities that build life skills—from cooking to budgeting—supported by experienced staff.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Weekend & school holiday stays</li>
+              <li>Skill-building programs</li>
+              <li>24/7 support</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 40-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/0fJoPBe-D9E?rel=0&modestbranding=1" title="STA overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Check Dates</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="STA Respite">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="home">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://chartercaretransport.com.au/wp-content/uploads/2025/05/Disability-Vehicles-1.jpg?q=80&w=1600&auto=format&fit=crop" alt="Support worker driving a wheelchair-accessible vehicle" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Transport Assistance</h3>
+            <p class="mt-2 text-slate-600">Door-to-door transport to appointments, work, or social activities in accessible vehicles with trained drivers.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>Accessible vehicles</li>
+              <li>Appointment transfers</li>
+              <li>Community access</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 35-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?rel=0&modestbranding=1" title="Transport overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Book Transport</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Transport Assistance">Copy name</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="group rounded-2xl border bg-white shadow-soft overflow-hidden" data-tags="clinical">
+          <div class="aspect-[16/9] bg-slate-100">
+            <img src="https://i0.wp.com/achrafothman.net/site/wp-content/uploads/man-in-vr-talking-to-therapist-PEKTNRT-800px.png?fit=800%2C533&ssl=1?q=80&w=1600&auto=format&fit=crop" alt="Therapist demonstrating assistive technology" class="h-full w-full object-cover transition group-hover:scale-[1.02]"/>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Assistive Technology & Home Modifications</h3>
+            <p class="mt-2 text-slate-600">From mobility aids to bathroom modifications, we assess, trial and coordinate install with quality providers.</p>
+            <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+              <li>AT assessments</li>
+              <li>Supplier trials</li>
+              <li>Compliance documentation</li>
+            </ul>
+            <details class="mt-4">
+              <summary class="cursor-pointer font-semibold">Watch 50-sec overview</summary>
+              <div class="mt-3 aspect-video">
+                <iframe class="w-full h-full rounded-xl" src="https://www.youtube-nocookie.com/embed/Tn6-PIqc4UM?rel=0&modestbranding=1" title="AT and home mods overview" loading="lazy" allowfullscreen></iframe>
+              </div>
+            </details>
+            <div class="mt-5 flex gap-2">
+              <a href="#contact" class="rounded-lg bg-primary px-4 py-2 text-white text-sm font-semibold hover:bg-primary-600">Start Assessment</a>
+              <button class="rounded-lg border px-4 py-2 text-sm" data-copy="Assistive Technology">Copy name</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-slate-50 border-y border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">About AbilityCare</h2>
+          <p class="mt-3 text-slate-700">We’re a Sydney-based team delivering flexible, reliable support grounded in respect and choice. Our approach is collaborative: we listen first, co-design your plan, and review outcomes regularly.</p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>Tailored support plans</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>Consistent, trained staff</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>Transparent pricing</li>
+            <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span>Allied health network</li>
+          </ul>
+          <div class="mt-8 flex gap-3">
+            <a href="#team" class="rounded-xl border px-5 py-3 font-semibold hover:bg-white">Meet the Team</a>
+            <a href="#contact" class="rounded-xl bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-600">Start Your Enquiry</a>
+          </div>
+        </div>
+        <figure class="order-1 lg:order-2 rounded-2xl overflow-hidden border bg-white shadow-soft">
+          <img class="h-full w-full object-cover" src="https://lirp.cdn-website.com/8b208d09/dms3rep/multi/opt/AdobeStock_317139241-640w.jpeg?q=80&w=1600&auto=format&fit=crop" alt="Diverse group of support workers smiling together"/>
+          <figcaption class="px-4 py-3 text-xs text-slate-600">Our values: respect, safety, inclusion, and independence.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Meet our care team</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">Experienced professionals across personal care, community access and clinical coordination.</p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Member -->
+        <article class="rounded-2xl border bg-white p-5 text-center shadow-soft">
+          <img class="mx-auto h-24 w-24 rounded-full object-cover" src="https://i.pravatar.cc/200?img=32" alt="Portrait of Priya, Support Coordinator"/>
+          <h3 class="mt-3 font-bold">Priya Sharma</h3>
+          <p class="text-sm text-slate-600">Support Coordinator</p>
+          <p class="mt-2 text-sm">Specialises in complex needs and hospital-to-home transitions.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-5 text-center shadow-soft">
+          <img class="mx-auto h-24 w-24 rounded-full object-cover" src="https://i.pravatar.cc/200?img=12" alt="Portrait of Daniel, Senior Support Worker"/>
+          <h3 class="mt-3 font-bold">Daniel Kim</h3>
+          <p class="text-sm text-slate-600">Senior Support Worker</p>
+          <p class="mt-2 text-sm">Community access, SIL mentoring and skills coaching.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-5 text-center shadow-soft">
+          <img class="mx-auto h-24 w-24 rounded-full object-cover" src="https://i.pravatar.cc/200?img=5" alt="Portrait of Aisha, Registered Nurse"/>
+          <h3 class="mt-3 font-bold">Aisha Patel</h3>
+          <p class="text-sm text-slate-600">Registered Nurse</p>
+          <p class="mt-2 text-sm">Complex care, wound care and medication management.</p>
+        </article>
+        <article class="rounded-2xl border bg-white p-5 text-center shadow-soft">
+          <img class="mx-auto h-24 w-24 rounded-full object-cover" src="https://i.pravatar.cc/200?img=46" alt="Portrait of Michael, Plan Manager"/>
+          <h3 class="mt-3 font-bold">Michael Lee</h3>
+          <p class="text-sm text-slate-600">Plan Manager</p>
+          <p class="mt-2 text-sm">NDIS budgeting, invoicing and reporting.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stories / Testimonials -->
+    <section id="stories" class="bg-slate-50 border-y border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Stories from our community</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+            <blockquote class="text-slate-700">“AbilityCare helped me return to volunteering twice a week. The staff are respectful and reliable.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-600">— Sarah, Parramatta</figcaption>
+          </figure>
+          <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+            <blockquote class="text-slate-700">“Their team made the NDIS process clear and simple. Invoices are sorted and I feel in control.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-600">— James, Liverpool</figcaption>
+          </figure>
+          <figure class="rounded-2xl border bg-white p-6 shadow-soft">
+            <blockquote class="text-slate-700">“Overnight support has reduced falls at home and improved sleep for the whole family.”</blockquote>
+            <figcaption class="mt-4 text-sm text-slate-600">— Aisha’s family, Bankstown</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Resources</h2>
+          <p class="mt-2 text-slate-600">Guides and explainers to help you navigate support options.</p>
+        </div>
+        <a class="text-primary font-semibold underline underline-offset-4" href="#contact">Request a resource pack</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-bold">Choosing the Right Support</h3>
+          <p class="mt-2 text-sm text-slate-600">A plain-English checklist to compare providers.</p>
+          <a href="#" class="mt-3 inline-block text-sm font-semibold text-primary underline">Download PDF</a>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-bold">NDIS Plan Management 101</h3>
+          <p class="mt-2 text-sm text-slate-600">Understand budgets, invoices and reporting.</p>
+          <a href="#" class="mt-3 inline-block text-sm font-semibold text-primary underline">Download PDF</a>
+        </article>
+        <article class="rounded-2xl border bg-white p-6 shadow-soft">
+          <h3 class="font-bold">Home Safety Tips</h3>
+          <p class="mt-2 text-sm text-slate-600">Simple modifications that reduce risk.</p>
+          <a href="#" class="mt-3 inline-block text-sm font-semibold text-primary underline">Download PDF</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-slate-50 border-y border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">FAQs</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <details class="rounded-xl border bg-white p-5 shadow-soft">
+            <summary class="font-semibold cursor-pointer">Are you NDIS-registered?</summary>
+            <p class="mt-2 text-slate-700">Yes. We’re registered and comply with the NDIS Practice Standards and Quality & Safeguards. Certificates available on request.</p>
+          </details>
+          <details class="rounded-xl border bg-white p-5 shadow-soft">
+            <summary class="font-semibold cursor-pointer">Do you provide weekend and overnight support?</summary>
+            <p class="mt-2 text-slate-700">Yes. We roster active and sleepover shifts to meet your needs.</p>
+          </details>
+          <details class="rounded-xl border bg-white p-5 shadow-soft">
+            <summary class="font-semibold cursor-pointer">Can I choose my support workers?</summary>
+            <p class="mt-2 text-slate-700">Absolutely. We match preferences and skills, and keep your team consistent.</p>
+          </details>
+          <details class="rounded-xl border bg-white p-5 shadow-soft">
+            <summary class="font-semibold cursor-pointer">Which areas do you cover?</summary>
+            <p class="mt-2 text-slate-700">Greater Sydney and select regional hubs. Ask us about your suburb.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Get in touch</h2>
+          <p class="mt-2 text-slate-600">Tell us a little about your goals. We’ll respond within one business day.</p>
+
+          <!-- Map -->
+          <div class="mt-6 rounded-2xl overflow-hidden border shadow-soft">
+            <iframe title="AbilityCare Office Location" class="w-full aspect-[16/9]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.0!2d151.2093!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSydney!5e0!3m2!1sen!2sau!4v1700000000000"></iframe>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl border bg-white p-4">
+              <h3 class="font-semibold">Phone</h3>
+              <a class="text-primary underline" href="tel:+61280000000">+61 2 8000 0000</a>
+            </div>
+            <div class="rounded-xl border bg-white p-4">
+              <h3 class="font-semibold">Email</h3>
+              <a class="text-primary underline" href="mailto:hello@abilitycare.example">hello@abilitycare.example</a>
+            </div>
+            <div class="rounded-xl border bg-white p-4 sm:col-span-2">
+              <h3 class="font-semibold">Address</h3>
+              <p>Level 2, 123 Care Street, Sydney NSW 2000, Australia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="contactForm" class="rounded-2xl border bg-white p-6 shadow-soft" aria-describedby="formHelp" novalidate>
+          <div id="formHelp" class="sr-only" aria-live="polite"></div>
+
+          <!-- Honeypot -->
+          <div class="hidden">
+            <label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="firstName" class="block text-sm font-medium">First name *</label>
+              <input id="firstName" name="firstName" class="mt-1 w-full rounded-xl border px-3 py-2 focus-ring" required aria-required="true" />
+              <p class="mt-1 text-xs text-red-600 hidden" data-error-for="firstName">Please enter your first name.</p>
+            </div>
+            <div>
+              <label for="lastName" class="block text-sm font-medium">Last name *</label>
+              <input id="lastName" name="lastName" class="mt-1 w-full rounded-xl border px-3 py-2 focus-ring" required aria-required="true" />
+              <p class="mt-1 text-xs text-red-600 hidden" data-error-for="lastName">Please enter your last name.</p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm font-medium">Email *</label>
+              <input id="email" name="email" type="email" class="mt-1 w-full rounded-xl border px-3 py-2 focus-ring" required aria-required="true" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"/>
+              <p class="mt-1 text-xs text-red-600 hidden" data-error-for="email">Enter a valid email.</p>
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium">Phone</label>
+              <input id="phone" name="phone" class="mt-1 w-full rounded-xl border px-3 py-2 focus-ring" inputmode="tel" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium">Service interest</label>
+              <select id="service" name="service" class="mt-1 w-full rounded-xl border px-3 py-2 bg-white focus-ring">
+                <option>Assistance with Daily Living</option>
+                <option>Community Participation</option>
+                <option>In-Home Care & Overnight</option>
+                <option>Support Coordination</option>
+                <option>Respite (STA)</option>
+                <option>Transport</option>
+                <option>Allied Health Coordination</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm font-medium">How can we help? *</label>
+              <textarea id="message" name="message" rows="5" class="mt-1 w-full rounded-xl border px-3 py-2 focus-ring" required aria-required="true"></textarea>
+              <p class="mt-1 text-xs text-red-600 hidden" data-error-for="message">Please add a short message.</p>
+            </div>
+          </div>
+
+          <div class="mt-4 flex items-start gap-3">
+            <input id="consent" type="checkbox" class="mt-1 h-4 w-4 rounded border" required aria-required="true"/>
+            <label for="consent" class="text-sm text-slate-700">I agree to be contacted about my enquiry. Read our <a href="#" class="underline">Privacy Policy</a>.</label>
+          </div>
+          <p class="mt-1 text-xs text-red-600 hidden" data-error-for="consent">Consent is required.</p>
+
+          <div class="mt-6 flex items-center gap-3">
+            <button type="submit" class="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 font-semibold text-white hover:bg-primary-600 focus-ring">Send enquiry</button>
+            <button type="reset" class="inline-flex items-center rounded-xl border px-5 py-2.5 font-semibold hover:bg-slate-50 focus-ring">Reset</button>
+            <span id="formStatus" role="status" aria-live="polite" class="text-sm"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-bold">AC</span>
+          <span class="font-extrabold tracking-tight text-slate-900">AbilityCare</span>
+        </div>
+        <p class="mt-3 text-slate-600">Compassionate, reliable disability support across Sydney.</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Services</h3>
+        <ul class="mt-2 space-y-1">
+          <li><a class="hover:underline" href="#services">Daily Living</a></li>
+          <li><a class="hover:underline" href="#services">Community Participation</a></li>
+          <li><a class="hover:underline" href="#services">In-Home Care</a></li>
+          <li><a class="hover:underline" href="#services">Plan Management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold">Company</h3>
+        <ul class="mt-2 space-y-1">
+          <li><a class="hover:underline" href="#about">About</a></li>
+          <li><a class="hover:underline" href="#team">Team</a></li>
+          <li><a class="hover:underline" href="#stories">Stories</a></li>
+          <li><a class="hover:underline" href="#resources">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold">Contact</h3>
+        <address class="not-italic mt-2 text-slate-700">
+          Level 2, 123 Care Street<br/>Sydney NSW 2000<br/>
+          <a class="text-primary underline" href="tel:+61280000000">+61 2 8000 0000</a><br/>
+          <a class="text-primary underline" href="mailto:hello@abilitycare.example">hello@abilitycare.example</a>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+        <p>© <span data-current-year></span> AbilityCare. All rights reserved Md. Mahbubur Rahman.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:underline" href="#">Privacy</a>
+          <a class="hover:underline" href="#">Terms</a>
+          <a class="hover:underline" href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed bottom-4 left-1/2 z-50 hidden -translate-x-1/2 rounded-xl bg-slate-900 px-4 py-2 text-sm text-white shadow-soft"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle?.addEventListener('click', () => {
+      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Service filter
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const cards = [...document.querySelectorAll('#serviceGrid > article')];
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.setAttribute('aria-selected', 'false'); t.classList.remove('bg-slate-900','text-white'); });
+      tab.setAttribute('aria-selected', 'true'); tab.classList.add('bg-slate-900','text-white');
+      const f = tab.dataset.filter;
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(' ');
+        const show = f === 'all' || tags.includes(f);
+        card.classList.toggle('hidden', !show);
+      });
+    }));
+
+    // Copy name buttons
+    document.querySelectorAll('button[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(btn.getAttribute('data-copy')); showToast('Copied to clipboard'); }
+        catch { showToast('Copy failed'); }
+      });
+    });
+
+    // Text size controls
+    const root = document.documentElement;
+    const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+    let base = 100;
+    document.getElementById('increaseText')?.addEventListener('click', () => { base = clamp(base + 6, 94, 124); root.style.fontSize = base + '%'; showToast('Text size increased'); });
+    document.getElementById('decreaseText')?.addEventListener('click', () => { base = clamp(base - 6, 94, 124); root.style.fontSize = base + '%'; showToast('Text size decreased'); });
+
+    // High contrast toggle
+    const contrastBtn = document.getElementById('toggleContrast');
+    contrastBtn?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('high-contrast');
+      showToast(document.documentElement.classList.contains('high-contrast') ? 'High contrast on' : 'High contrast off');
+    });
+
+    // Simple form validation
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    function setFieldError(id, show) {
+      const err = document.querySelector(`[data-error-for="${id}"]`);
+      if (!err) return;
+      err.classList.toggle('hidden', !show);
+    }
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      let ok = true;
+      [['firstName', v=>v.trim().length>1], ['lastName', v=>v.trim().length>1], ['email', v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)], ['message', v=>v.trim().length>5], ['consent', ()=>document.getElementById('consent').checked]]
+      .forEach(([id, test])=>{
+        const el = document.getElementById(id);
+        const val = el?.type === 'checkbox' ? el.checked : el?.value || '';
+        const valid = test(val);
+        setFieldError(id, !valid);
+        ok = ok && valid;
+      });
+      if (!ok) { statusEl.textContent = 'Please fix the highlighted fields.'; showToast('Form has errors'); return; }
+      // Simulate submit
+      showToast('Thanks! Your enquiry has been sent.');
+      statusEl.textContent = 'Sent. We will contact you soon.';
+      form.reset();
+    });
+
+    // Toast helper
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(msg) {
+      if (!toast) return;
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    // Respect prefers-contrast (basic hook)
+    const media = window.matchMedia('(prefers-contrast: more)');
+    if (media.matches) document.documentElement.classList.add('high-contrast');
+    media.addEventListener?.('change', e => {
+      if (e.matches) document.documentElement.classList.add('high-contrast');
+    });
+  </script>
+
+  <!-- Basic SEO structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"AbilityCare",
+    "image":"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+    "url":"https://abilitycare.example",
+    "telephone":"+61-2-8000-0000",
+    "address":{"@type":"PostalAddress","streetAddress":"Level 2, 123 Care Street","addressLocality":"Sydney","addressRegion":"NSW","postalCode":"2000","addressCountry":"AU"},
+    "areaServed":"Sydney",
+    "sameAs":[]
+  }
+  </script>
+</body>
+</html>
